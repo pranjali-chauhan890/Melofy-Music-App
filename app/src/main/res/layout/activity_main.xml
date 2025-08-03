@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:background="#FFB6C1">
+
+<ImageView
+    android:id="@+id/appLogo"
+    android:layout_width="40dp"
+    android:layout_height="40dp"
+    android:src="@drawable/music_icon"
+    android:contentDescription="App Logo"
+    android:layout_marginEnd="8dp" />
+
+<TextView
+    android:id="@+id/appName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Melofy"
+    android:textColor="#FF4081"
+    android:textSize="30sp"
+    android:textStyle="bold"
+    android:fontFamily="@font/loversquarrel" />
+        </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F3E5F5">
+
+
+                <!-- Grid of 6 music categories -->
+                <GridLayout
+                    android:id="@+id/categoryGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:columnCount="2"
+                    android:padding="16dp"
+                    android:alignmentMode="alignMargins"
+                    android:rowCount="3"
+                    android:useDefaultMargins="true">
+
+                    <!-- Category 1: Lofi Beats -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#FFEBF0"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openLofiCategory">
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/lofi_beats" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lofi Beats"
+                            android:textSize="16sp"
+                            android:textColor="#FF4081"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+
+                    <!-- Category 2: Romantic -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#FFEBF0"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openRomanticCategory">
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/romantic" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Romantic"
+                            android:textSize="16sp"
+                            android:textColor="#FF4081"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+
+                    <!-- Category 3: Workout -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#FFEBF0"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openWorkoutCategory">
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/workout" />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Workout"
+                            android:textSize="16sp"
+                            android:textColor="#FF4081"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+
+                    <!-- Category 4: Instrumental -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#FFEBF0"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openInstrumentalCategory">
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:contentDescription="Music Category icon"
+                            android:src="@drawable/instrumental"
+                             />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Instrumental"
+                            android:textSize="16sp"
+                            android:textColor="#FF4081"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+
+                    <!-- Category 5: Hip Hop -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#FFEBF0"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openHipHopCategory">
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/hip_hop"
+                            />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Hip Hop"
+                            android:textSize="16sp"
+                            android:textColor="#FF4081"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+
+                    <!-- Category 6: Chill Vibes -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_columnWeight="1"
+                        android:layout_rowWeight="1"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#FFEBF0"
+                        android:layout_margin="8dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:onClick="openChillCategory">
+
+                        <ImageView
+                            android:layout_width="140dp"
+                            android:layout_height="140dp"
+                            android:src="@drawable/chillvibes"
+                            />
+
+                        <TextView
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:text="Chill Vibes"
+                            android:textSize="16sp"
+                            android:textColor="#FF4081"
+                            android:textStyle="bold"
+                            android:layout_marginTop="8dp"/>
+                    </LinearLayout>
+
+                </GridLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
